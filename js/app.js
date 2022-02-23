@@ -59,9 +59,10 @@ const showDetails = async(details) => {
 const displayDetails = (foodDetails) => {
     console.log(foodDetails.strMeal)
     const show = document.getElementById('show');
+    show.textContent = '';
     show.innerHTML = `
-            <div class="card w-50 ">
-            <img src="${foodDetails.strMealThumb}" class="card-img-top" alt="${foodDetails.strMeal}">
+            <div class="card">
+            <img src="${foodDetails.strMealThumb}" class="card-img-top w-100" alt="${foodDetails.strMeal}">
                 <div class="card-body">
               <h5 class="card-title">${foodDetails.strMeal}</h5>
                 <p class="card-text">${foodDetails.strInstructions.slice(0,100)}</p>
